@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<form id="registrationForm">
+    <h2>Registration Form</h2>
+    
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <fieldset class="radio-group">
+        <legend>Gender</legend>
+        <label>
+            <input type="radio" name="gender" value="male" required> Male
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female" required> Female
+        </label>
+        <label>
+            <input type="radio" name="gender" value="other" required> Other
+        </label>
+    </fieldset>
+
+    <fieldset class="checkbox-group">
+        <legend>Hobbies</legend>
+        <label>
+            <input type="checkbox" name="hobbies" value="reading"> Reading
+        </label>
+        <label>
+            <input type="checkbox" name="hobbies" value="traveling"> Traveling
+        </label>
+        <label>
+            <input type="checkbox" name="hobbies" value="sports"> Sports
+        </label>
+        <label>
+            <input type="checkbox" name="hobbies" value="music"> Music
+        </label>
+    </fieldset>
+
+    <label>
+        <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+        Accept Terms & Conditions
+    </label>
+
+    <button type="submit">Submit</button>
+</form>
+
+<div id="registrationData" style="display: none;">
+    <h3>Registration Data</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+                <th>Hobbies</th>
+            </tr>
+        </thead>
+        <tbody id="dataOutput"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script> 
+</body>
+</html>
